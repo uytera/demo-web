@@ -8,8 +8,11 @@ public class Post {
     String text;
     Integer likes;
     Date creationDate;
+    Long id;
 
-    public Post(String text, Date creationDate)  {
+    public Post(Long id, String text, Date creationDate)  {
+        this.likes = 0;
+        this.id = id;
         this.text = text;
         this.creationDate = creationDate;
     }
@@ -24,6 +27,10 @@ public class Post {
 
     public String getText() {
         return text;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public void setText(String text) {
