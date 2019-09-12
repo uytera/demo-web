@@ -18,7 +18,8 @@ public class PostsViewController {
 
     @RequestMapping(path = "/", method = RequestMethod.GET)
     public String list(Model model) {
-        model.addAttribute("posts", postsService.listAllPosts("first", "zweit", "tertius"));
+        model.addAttribute("appName", "bibliothecam");
+        model.addAttribute("posts", postsService.listAllPosts());
         return "list";
     }
 
